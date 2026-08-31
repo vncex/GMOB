@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="One-on-one strength and conditioning coaching built around your goals.">
+  <meta property="og:title" content="Forge Training | Personal Coaching">
+  <meta property="og:description" content="Get stronger. Move better. Personal coaching built for real life.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/forge-social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Forge Training | Personal Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- EDITABLE: Update the business name and navigation labels below. -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Forge Training home">FORGE<span>.</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="#services">Training</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Stories</a>
+      <a href="#contact">Contact</a>
+      <a class="button button-small" href="#book">Book a session</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO: Replace the text and image with your own brand content. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Personal coaching · Built for real life</p>
+        <h1 id="hero-title">Get stronger.<br><span>Move better.</span></h1>
+        <p class="hero-copy">Focused strength and conditioning for people ready to train with purpose—and feel the difference outside the gym.</p>
+        <div class="hero-actions">
+          <a class="button" href="#book">Book your first session <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#services">Explore training <span aria-hidden="true">↓</span></a>
+        </div>
+        <dl class="hero-stats" aria-label="Training highlights">
+          <div><dt>1:1</dt><dd>Focused coaching</dd></div>
+          <div><dt>5+</dt><dd>Training formats</dd></div>
+          <div><dt>100%</dt><dd>Built around you</dd></div>
+        </dl>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Athlete training with battle ropes">
+        <div class="hero-tag"><span>Now booking</span> New clients</div>
+      </div>
+    </section>
+
+    <!-- BOOKING: Session types and available times are configured in script.js. -->
+    <section class="booking section" id="book" aria-labelledby="booking-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Start here</p><h2 id="booking-title">Choose your session</h2></div>
+        <p>Pick the training style, date, and available time that works for you. I’ll follow up personally to confirm.</p>
+      </div>
+      <div class="booking-panel">
+        <form id="booking-form" novalidate>
+          <fieldset class="form-step">
+            <legend><span>01</span> Training type</legend>
+            <div class="session-grid" id="session-options"></div>
+          </fieldset>
+          <fieldset class="form-step">
+            <legend><span>02</span> Date &amp; time</legend>
+            <div class="date-time-grid">
+              <label class="field">Preferred date<input id="booking-date" name="date" type="date" required></label>
+              <div class="field"><span class="field-label">Available times</span><div class="time-grid" id="time-options" aria-live="polite"></div></div>
+            </div>
+          </fieldset>
+          <fieldset class="form-step">
+            <legend><span>03</span> Your details</legend>
+            <div class="details-grid">
+              <label class="field">Full name<input name="name" type="text" autocomplete="name" placeholder="Jordan Lee" required></label>
+              <label class="field">Email address<input name="email" type="email" autocomplete="email" placeholder="jordan@example.com" required></label>
+              <label class="field">Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" required></label>
+            </div>
+          </fieldset>
+          <div class="form-message" id="booking-message" role="status" tabindex="-1" hidden></div>
+          <p class="booking-note">Submitting creates a request only. Your appointment is not reserved until you receive a personal confirmation.</p>
+          <button class="button" type="submit">Request this session <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SERVICES: Edit service names and descriptions here. -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="section service-inner">
+        <div class="section-heading light-heading">
+          <div><p class="eyebrow">Train with intention</p><h2 id="services-title">Built for where<br>you’re going.</h2></div>
+          <p>No recycled routines. Every session starts with where you are and moves deliberately toward where you want to be.</p>
+        </div>
+        <div class="service-list">
+          <article><span>01</span><div><h3>Personal training</h3><p>One-on-one coaching, tailored programming, and precise feedback in every rep.</p></div><b>60 min</b></article>
+          <article><span>02</span><div><h3>Strength training</h3><p>Progressive, technique-led sessions that build lasting strength and confidence.</p></div><b>60 min</b></article>
+          <article><span>03</span><div><h3>Conditioning</h3><p>Smart, scalable work that improves your engine without running you into the ground.</p></div><b>45 min</b></article>
+          <article><span>04</span><div><h3>Small group</h3><p>Focused coaching and shared energy for up to four athletes training together.</p></div><b>60 min</b></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS: Video URLs and labels are configured in script.js. -->
+    <section class="highlights section" id="highlights" aria-labelledby="highlights-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">In the room</p><h2 id="highlights-title">See the work.</h2></div>
+        <p>Real movement, focused coaching, and the energy that shows up when the plan has a purpose.</p>
+      </div>
+      <div class="video-grid" id="video-grid"></div>
+    </section>
+
+    <!-- ABOUT: Replace this copy and image with your own story. -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-image" role="img" aria-label="Personal trainer coaching an athlete"></div>
+      <div class="about-copy">
+        <p class="eyebrow">Meet your coach</p>
+        <h2 id="about-title">Training should build you up—not wear you down.</h2>
+        <p class="lead">I’m Alex Morgan, a strength coach who believes the best program is the one that fits your body, your goals, and your actual life.</p>
+        <p>We’ll build the fundamentals, challenge you at the right pace, and make every session count. You’ll always know what you’re doing, why you’re doing it, and how it moves you forward.</p>
+        <div class="credentials" aria-label="Coach credentials">
+          <span>Certified Personal Trainer</span><span>Strength &amp; Conditioning</span><span>Mobility Specialist</span>
+        </div>
+        <a class="button button-dark" href="#book">Train with Alex <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS: Testimonial content is configured in script.js. -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="testimonial-heading">
+        <div><p class="eyebrow">Client stories</p><h2 id="testimonials-title">Strong looks<br>different on everyone.</h2></div>
+        <div class="slider-controls">
+          <button type="button" id="testimonial-prev" aria-label="Previous testimonial">←</button>
+          <button type="button" id="testimonial-next" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+      <div class="testimonial-card" id="testimonial-card" aria-live="polite"></div>
+    </section>
+
+    <!-- CONTACT: Update every business detail in SITE_CONFIG inside script.js. -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <div>
+          <p class="eyebrow">Let’s talk</p>
+          <h2 id="contact-title">Ready when<br>you are.</h2>
+          <p>Questions before you book? Send a note and I’ll get back to you personally.</p>
+          <address id="contact-details"></address>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label class="field">Name<input name="name" type="text" autocomplete="name" required></label>
+          <label class="field">Email<input name="email" type="email" autocomplete="email" required></label>
+          <label class="field">Message<textarea name="message" rows="5" placeholder="Tell me what you’re working toward…" required></textarea></label>
+          <p class="contact-note">This static-site form opens your email app; it does not store your information.</p>
+          <button class="button" type="submit">Send a message <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#top">FORGE<span>.</span></a>
+    <p>© <span id="current-year"></span> Forge Training. Built for the work.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- Accessible modal used by training highlight videos. -->
+  <dialog class="video-modal" id="video-modal" aria-labelledby="video-modal-title">
+    <div class="modal-bar"><h2 id="video-modal-title">Training highlight</h2><button type="button" id="modal-close" aria-label="Close video">×</button></div>
+    <div class="video-frame" id="video-frame"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
