@@ -21,8 +21,8 @@ const SITE_CONFIG = {
   },
   sessions: [
     { name: "Personal Training", duration: "60 min" },
-    { name: "Strength Training", duration: "60 min" },
-    { name: "Conditioning", duration: "45 min" },
+    { name: "Strength and Conditioning Training", duration: "60 min" },
+    { name: "Agility", duration: "45 min" },
     { name: "Group Training", duration: "60 min" },
     { name: "Custom Training", duration: "Let's talk" }
   ],
