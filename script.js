@@ -33,7 +33,7 @@ const SITE_CONFIG = {
     6: ["6:00 AM", "5:00 PM", "6:30 PM", "7:30 PM"]
   },
   highlights: [
-    { title: "Strength foundations", subtitle: "Squat · Hinge · Carry", facebookUrl: "https://www.facebook.com/reel/1544805910566693", image: "" },
+    { title: "Strength foundations", subtitle: "Workout. With. Grit.", facebookUrl: "https://www.facebook.com/reel/1544805910566693", image: "" },
     { title: "Conditioning day", subtitle: "Power · Pace · Control", youtubeId: "U0bhE67HuDY", image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=82" },
     { title: "Move with purpose", subtitle: "Mobility · Stability · Skill", youtubeId: "IODxDxX7oi4", image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1000&q=82" }
   ],
@@ -136,14 +136,26 @@ function renderHighlights() {
 
 document.querySelector("#video-grid").addEventListener("click", event => {
   const card = event.target.closest(".video-card");
+
   if (!card) return;
-  const item = SITE_CONFIG.highlights[Number(card.dataset.videoIndex)];
-  document.querySelector("#video-modal-title").textContent = item.title;
-  document.querySelector("#video-frame").innerHTML = `<iframe src="https://www.facebook.com/plugins/video.php?href=${facebookVideo}&show_text=false&width=900"
-    title="${item.title}"
-    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>`;
+
+  const item =
+    SITE_CONFIG.highlights[Number(card.dataset.videoIndex)];
+
+  const facebookVideo =
+    encodeURIComponent(item.facebookUrl);
+
+  document.querySelector("#video-modal-title").textContent =
+    item.title;
+
+  document.querySelector("#video-frame").innerHTML = `
+    <iframe
+      src="https://www.facebook.com/plugins/video.php?href=${facebookVideo}&show_text=false&width=900"
+      title="${item.title}"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>`;
+
   videoModal.showModal();
 });
 
