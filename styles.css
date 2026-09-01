@@ -27,7 +27,7 @@ img { max-width: 100%; }
 .site-header { height: 78px; padding: 0 max(24px, calc((100vw - var(--max)) / 2)); display: flex; align-items: center; justify-content: space-between; background: var(--ink); color: var(--white); }
 .brand { font: 700 1.8rem/1 var(--display); letter-spacing: .06em; text-decoration: none; }
 .brand span { color: var(--acid); }
-.brand img {display: block; width: auto; height: 42px; object-fit: contain;}
+.brand img {display: block; width: auto; height: auto; object-fit: contain;}
 .site-nav { display: flex; align-items: center; gap: 30px; }
 .site-nav > a:not(.button) { color: #c7c9c2; font-size: .86rem; font-weight: 600; text-decoration: none; }
 .site-nav > a:hover { color: var(--white); }
