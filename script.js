@@ -139,7 +139,11 @@ document.querySelector("#video-grid").addEventListener("click", event => {
   if (!card) return;
   const item = SITE_CONFIG.highlights[Number(card.dataset.videoIndex)];
   document.querySelector("#video-modal-title").textContent = item.title;
-  document.querySelector("#video-frame").innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${item.youtubeId}?autoplay=1&rel=0" title="${item.title}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  document.querySelector("#video-frame").innerHTML = `<iframe src="https://www.facebook.com/plugins/video.php?href=${facebookVideo}&show_text=false&width=900"
+    title="${item.title}"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>`;
   videoModal.showModal();
 });
 
