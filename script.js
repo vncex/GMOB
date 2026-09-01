@@ -33,7 +33,7 @@ const SITE_CONFIG = {
     6: ["6:00 AM", "5:00 PM", "6:30 PM", "7:30 PM"]
   },
   highlights: [
-    { title: "Strength foundations", subtitle: "Squat · Hinge · Carry", youtubeId: "ml6cT4AZdqI", image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1300&q=82" },
+    { title: "Strength foundations", subtitle: "Squat · Hinge · Carry", facebookUrl: "https://www.facebook.com/reel/1544805910566693", image: "" },
     { title: "Conditioning day", subtitle: "Power · Pace · Control", youtubeId: "U0bhE67HuDY", image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=82" },
     { title: "Move with purpose", subtitle: "Mobility · Stability · Skill", youtubeId: "IODxDxX7oi4", image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1000&q=82" }
   ],
